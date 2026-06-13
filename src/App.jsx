@@ -137,6 +137,16 @@ export default function App() {
   const t0     = useRef();
   const drag   = useRef({ active: false, id: null, timer: null, startY: 0 });
 
+useEffect(() => {
+  document.documentElement.style.overflow = 'hidden';
+  document.documentElement.style.height = '100%';
+  document.body.style.overflow = 'hidden';
+  document.body.style.height = '100%';
+  document.body.style.position = 'fixed';
+  document.body.style.width = '100%';
+}, []);
+
+  
   // Load from localStorage
   useEffect(() => {
     const saved = loadWorkouts();
