@@ -275,7 +275,9 @@ useEffect(() => {
   };
 
   return (
-    <div style={{ minHeight: "100%", background: T.bg, color: T.text, fontFamily: F }}>
+    <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
+overflowY: "auto", background: T.bg, color: T.text, fontFamily: F
+ }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
