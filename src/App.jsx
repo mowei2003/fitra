@@ -276,7 +276,12 @@ useEffect(() => {
 
   return (
     <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-overflowY: "auto", background: T.bg, color: T.text, fontFamily: F
+height: "100dvh",
+overflowY: "auto",
+WebkitOverflowScrolling: "touch",
+overscrollBehavior: "contain",
+background: T.bg, color: T.text, fontFamily: F
+
  }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
