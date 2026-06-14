@@ -293,6 +293,7 @@ overflowY: "auto", background: T.bg, color: T.text, fontFamily: F
         .fade-up  { animation: fadeUp  .28s ease both; }
         .slide-in { animation: slideIn .22s ease both; }
         .flicker  { animation: flicker 1.2s ease infinite; }
+        * { overscroll-behavior: none; }
         ::-webkit-scrollbar { width: 0; }
         input[type=number]::-webkit-inner-spin-button { opacity: 1; }
       `}</style>
