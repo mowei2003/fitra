@@ -294,6 +294,12 @@ overflowY: "auto", background: T.bg, color: T.text, fontFamily: F
         .slide-in { animation: slideIn .22s ease both; }
         .flicker  { animation: flicker 1.2s ease infinite; }
         * { overscroll-behavior: none; }
+        body { background: #0C0C0E; }
+#root {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
+}
         ::-webkit-scrollbar { width: 0; }
         input[type=number]::-webkit-inner-spin-button { opacity: 1; }
       `}</style>
