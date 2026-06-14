@@ -136,17 +136,6 @@ export default function App() {
   const elRef  = useRef(); const restRef = useRef();
   const t0     = useRef();
   const drag   = useRef({ active: false, id: null, timer: null, startY: 0 });
-
-useEffect(() => {
-  document.documentElement.style.overflow = 'hidden';
-  document.documentElement.style.height = '100%';
-  document.body.style.overflow = 'hidden';
-  document.body.style.height = '100%';
-  document.body.style.position = 'fixed';
-  document.body.style.width = '100%';
-}, []);
-
-  
   // Load from localStorage
   useEffect(() => {
     const saved = loadWorkouts();
@@ -276,11 +265,12 @@ useEffect(() => {
 
   return (
     <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0,
-height: "100dvh",
 overflowY: "auto",
 WebkitOverflowScrolling: "touch",
 overscrollBehavior: "contain",
+paddingBottom: "env(safe-area-inset-bottom)",
 background: T.bg, color: T.text, fontFamily: F
+
 
  }}>
       <style>{`
@@ -300,12 +290,6 @@ background: T.bg, color: T.text, fontFamily: F
         .flicker  { animation: flicker 1.2s ease infinite; }
         html, body { overscroll-behavior: none; }
 
-        body { background: #0C0C0E; }
-#root {
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  box-sizing: border-box;
-}
         ::-webkit-scrollbar { width: 0; }
         input[type=number]::-webkit-inner-spin-button { opacity: 1; }
       `}</style>
