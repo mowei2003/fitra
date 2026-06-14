@@ -472,7 +472,10 @@ overflowY: "auto", background: T.bg, color: T.text, fontFamily: F
         <div className="fade-up" style={{ maxWidth: 480, margin: "0 auto", paddingBottom: 52 }}>
           {/* Sticky header */}
           <div style={{ background: T.card, borderBottom: `1px solid ${T.border}`,
-            padding: "20px 20px 16px", position: "sticky", top: 0, zIndex: 10 }}>
+          paddingTop: "calc(env(safe-area-inset-top) + 20px)",
+paddingLeft: "20px", paddingRight: "20px", paddingBottom: "16px",
+position: "sticky", top: 0, zIndex: 10
+  }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
               <div>
                 <p style={{ ...LABEL, marginBottom: 5 }}>{activeWO?.name}</p>
