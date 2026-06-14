@@ -293,7 +293,8 @@ overflowY: "auto", background: T.bg, color: T.text, fontFamily: F
         .fade-up  { animation: fadeUp  .28s ease both; }
         .slide-in { animation: slideIn .22s ease both; }
         .flicker  { animation: flicker 1.2s ease infinite; }
-        * { overscroll-behavior: none; }
+        html, body { overscroll-behavior: none; }
+
         body { background: #0C0C0E; }
 #root {
   padding-top: env(safe-area-inset-top);
