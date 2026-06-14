@@ -268,7 +268,6 @@ export default function App() {
 overflowY: "auto",
 WebkitOverflowScrolling: "touch",
 overscrollBehavior: "contain",
-paddingBottom: "env(safe-area-inset-bottom)",
 background: T.bg, color: T.text, fontFamily: F
 
 
@@ -289,6 +288,7 @@ background: T.bg, color: T.text, fontFamily: F
         .slide-in { animation: slideIn .22s ease both; }
         .flicker  { animation: flicker 1.2s ease infinite; }
         html, body { overscroll-behavior: none; }
+        html, body { background: #0C0C0E; }
 
         ::-webkit-scrollbar { width: 0; }
         input[type=number]::-webkit-inner-spin-button { opacity: 1; }
